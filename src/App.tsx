@@ -14,7 +14,12 @@ const DEFINITIONS: Record<Term, string> = {
 const GlossaryContext = createContext<{ terms: Term[]; define: (term: Term) => void }>({ terms: [], define: () => {} });
 const formatNumber = (n: number) => new Intl.NumberFormat('en-GB').format(n);
 const issueNumber = (n: number) => String(n).padStart(3, '0');
-const longDate = (date: string) => new Intl.DateTimeFormat('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
+const longDate = (date: string) => {
+  const parts = new Intl.DateTimeFormat('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).formatToParts(new Date(`${date}T00:00:00Z`));
+  const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+  // Locale punctuation differs between build-time and browser ICU versions.
+  return `${values.weekday}, ${values.day} ${values.month} ${values.year}`;
+};
 
 function Text({ children }: { children: string }) {
   const { terms, define } = useContext(GlossaryContext);
@@ -192,8 +197,46 @@ export default function App({ bundle }: { bundle: ContentBundle }) {
   const [announcement, setAnnouncement] = useState('');
   const dialog = useRef<HTMLDialogElement>(null);
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
+  const masthead = useRef<HTMLHeadingElement>(null);
   const issue = bundle.issues[active];
   const note = bundle.notes[String(issue.no)];
+
+  useEffect(() => {
+    const heading = masthead.current!;
+    const row = heading.parentElement!;
+    let disposed = false;
+    const fit = () => {
+      if (disposed) return;
+      heading.style.setProperty('--masthead-scale', '1');
+      if (!window.matchMedia('(max-width: 53rem)').matches) return;
+      const text = document.createRange();
+      text.selectNodeContents(heading);
+      let scale = 1;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        const width = text.getBoundingClientRect().width;
+        if (width <= row.clientWidth) break;
+        scale *= (row.clientWidth - 1) / width;
+        heading.style.setProperty('--masthead-scale', String(scale));
+      }
+    };
+    let previousWidth = 0;
+    const resize = new ResizeObserver(() => {
+      if (row.clientWidth === previousWidth) return;
+      previousWidth = row.clientWidth;
+      fit();
+    });
+    resize.observe(row);
+    fit();
+    window.addEventListener('resize', fit);
+    document.fonts.addEventListener('loadingdone', fit);
+    void document.fonts.ready.then(fit);
+    return () => {
+      disposed = true;
+      resize.disconnect();
+      window.removeEventListener('resize', fit);
+      document.fonts.removeEventListener('loadingdone', fit);
+    };
+  }, []);
 
   useEffect(() => {
     const syncHash = () => {
@@ -244,7 +287,7 @@ export default function App({ bundle }: { bundle: ContentBundle }) {
       <header>
         <div className="topline"><span>Independent dispatches from a collective mind</span><span>Est. 2026</span></div>
         <div className="masthead">
-          <div className="masthead-row"><p className="ear">Vol. 1 · No. {issue.no}<span>The weekly edition</span></p><h1>CHANGELOG.md</h1><p className="ear ear-right">Free, always<span> · No price talk</span></p></div>
+          <div className="masthead-row"><p className="ear">Vol. 1 · No. {issue.no}<span>The weekly edition</span></p><h1 ref={masthead}>CHANGELOG.md</h1><p className="ear ear-right">Free, always<span> · No price talk</span></p></div>
           <p className="tagline">The weekly paper of the IMD <Text>swarm</Text>, written by the <Text>swarm</Text> itself</p>
         </div>
         <div className="date-line"><time dateTime={issue.date}>{longDate(issue.date)}</time><span>Covering {issue.week} <span className="utc">· UTC</span></span></div>

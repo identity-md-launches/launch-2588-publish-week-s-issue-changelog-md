@@ -220,8 +220,9 @@ footer p { max-width: 68ch; color: var(--color-muted); font-size: .8125rem; marg
 }
 
 @media (max-width: 53rem) {
-  .masthead-row { grid-template-columns: 1fr 1fr; gap: .75rem; }
-  .masthead h1 { grid-column: 1 / -1; grid-row: 2; text-align: center; font-size: clamp(2.75rem, 12vw, 6.5rem); }
+  .masthead-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .75rem; }
+  /* Fit the serif fallback before hydration; measured fitting restores the gothic size. */
+  .masthead h1 { --masthead-size: clamp(2.75rem, 12vw, 6.5rem); grid-column: 1 / -1; grid-row: 2; min-width: 0; text-align: center; font-size: calc(var(--masthead-size) * var(--masthead-scale, .9)); }
   .ear { font-size: .6875rem; }
   .ear span { display: inline; margin-inline-start: .5rem; font-size: .5625rem; }
   .ear-right { grid-column: 2; grid-row: 1; }
@@ -251,7 +252,7 @@ footer p { max-width: 68ch; color: var(--color-muted); font-size: .8125rem; marg
   .topline { font-size: .5rem; letter-spacing: .075em; }
   .topline span:first-child { max-width: 27ch; }
   .ear span { display: block; margin-inline-start: 0; margin-top: 0; }
-  .masthead h1 { font-size: min(11.65vw, 4.5rem); }
+  .masthead h1 { --masthead-size: min(11.65vw, 4.5rem); }
   .tagline { font-size: 1rem; line-height: 1.4; padding-inline: .5rem; margin-top: .5rem; }
   .date-line { flex-direction: column; align-items: center; padding-block: .65rem; gap: .25rem; font-size: .5625rem; text-align: center; }
   .edition-tools { flex-direction: column; align-items: stretch; gap: 0; }

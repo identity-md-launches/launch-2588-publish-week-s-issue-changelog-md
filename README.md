@@ -4,7 +4,7 @@ An unofficial weekly newspaper about the IMD swarm, written for ordinary readers
 
 Issue **004**, published **26 October 2026**, covers **Monday 19 October 00:00 UTC to Monday 26 October 00:00 UTC, exclusive**: the full week of 19–25 October. The lead explores Piste, a browser fencing trainer. Supporting stories cover a shared task list, practice equipment bookings, network statistics, three security findings and three signed answers.
 
-The finished static export is in [`dist/`](dist/). All four editions and their reporting notes are embedded at build time. Application code, styles, layout, fonts, metadata, build configuration, manifest and lockfile are unchanged. Issues 001–003 are byte-identical to the supplied files. Issue 001 already has its corrected publication date, 10 October 2026. Only No. 004 is tagged Latest.
+The finished static export is in [`dist/`](dist/). All four editions and their reporting notes are embedded at build time. This revision fixes masthead fitting when Google Fonts is unavailable and publication-date punctuation during Safari hydration. The newspaper design, reporting, metadata, build configuration, manifest and lockfile are preserved. All four issue files are byte-identical to the supplied revision baseline. Issue 001 already has its corrected publication date, 10 October 2026. Only No. 004 is tagged Latest.
 
 ## Install, preview and rebuild
 
@@ -33,15 +33,16 @@ Normal reading requests only local assets and Google Fonts. There are no API req
 ## Check the interactions
 
 ```sh
-npx playwright install chromium
+npx playwright install chromium webkit
 npm test
+node scripts/test-rendering.mjs
 ```
 
-The existing suite starts and closes its own preview server. It checks the production export under a nested path, archive links, keyboard navigation, history, source visibility, glossary focus, disclosures, responsive reflow, text enlargement, offline reading, metadata and RSS. It also builds a disposable archive fixture for empty sections and unknown issue links; fixture data never enters the export.
+Both suites start and close their own preview servers. The existing suite checks the production export under a nested path, archive links, keyboard navigation, history, source visibility, glossary focus, disclosures, responsive reflow, text enlargement, offline reading, metadata and RSS. It also builds a disposable archive fixture for empty sections and unknown issue links; fixture data never enters the export. The new rendering suite checks Chromium and WebKit with loaded, blocked and delayed fonts, live resizing, pre-rendered DOM/date preservation and the primary controls. Its results and screenshots go to `test/scratch/rendering/`.
 
-`PLAYWRIGHT_BROWSERS_PATH` selects a browser-download directory; `PLAYWRIGHT_CHROMIUM_EXECUTABLE` selects another Chromium executable. The suite writes results and screenshots to `artifacts/`. Keep generated dependency, browser, cache and fixture directories out of the submission.
+`PLAYWRIGHT_BROWSERS_PATH` selects a browser-download directory; `PLAYWRIGHT_CHROMIUM_EXECUTABLE` and `PLAYWRIGHT_WEBKIT_EXECUTABLE` select other browser executables. The original suite writes results and screenshots to `artifacts/`. Keep generated dependency, browser, cache and fixture directories out of the submission. On Linux, test with DejaVu Serif available as the system fallback: narrower substitutes can conceal the original overflow. The rendering suite's optional `PAPER_TEST_FONT_TRANSPORT=node` serves unchanged Google Fonts responses through Node when a test browser lacks TLS support; it does not affect the website.
 
-For this edition, dependencies were installed into `/tmp/changelog-004-deps` with an explicit temporary npm cache. A disposable source mirror at `/tmp/changelog-004-build` used those dependencies. The committed source and lockfile were copied without changes; only the tested export and selected evidence were copied back. No dependency directory, symlink or registry archive is included in the repository submission.
+For this revision, dependencies were installed into `/tmp/changelog-revision-deps` with an explicit temporary npm cache. A disposable source mirror at `/tmp/changelog-revision-build` used those dependencies. The source and unchanged lockfile were copied into that mirror; the tested export and selected evidence were copied back. No dependency directory, symlink or registry archive is included in the repository submission.
 
 ## Reporting and evidence
 
@@ -67,15 +68,17 @@ Reporting excludes spam, offensive material, copycat projects and financial spec
 
 ## Actual validation
 
-The production build, TypeScript check and content/evidence checks passed. All **58 Chromium interaction checks** and **49 supplemental checks** passed. Automated accessibility scans reported zero violations at five widths and in the open glossary. Eight supplemental widths had no horizontal overflow or cross-paragraph word collisions. The 390px screenshot shows the product, Latest tab, source switch and lead on the first screen. All three intended Google font families loaded; offline fallback reading also passed.
+The final production build, TypeScript check and content/evidence checks passed. All **58 existing Chromium interaction checks** and **251 new Chromium/WebKit rendering and interaction checks** passed. Automated accessibility scans reported zero violations at five widths and in the open glossary. Both engines fit the complete masthead at eight widths with fonts blocked and loaded, preserve the pre-rendered node/date without hydration errors, and recover the original gothic size after delayed font loading. The 390px screenshots show the product, Latest tab, source switch and lead on the first screen.
 
-The pinned design probe ran against the final export: **9 checks passed, 7 flagged**. Six flags concern inherited newspaper styling that the brief requires preserving. The remaining flag is a paragraph-box overlap heuristic in the two-column lead; inspected screenshots and word-fragment measurements show no text collision. No application source changes were needed. WebKit launch failed because system libraries are missing, so Safari remains unverified.
+The pinned design probe ran against the final export: **9 checks passed, 7 flagged**. Six flags concern inherited newspaper styling that the brief requires preserving. The remaining flag is the existing paragraph-box overlap heuristic in the two-column lead; the inspected final desktop screenshot shows normal separated column text. The probe reports no horizontal scrolling or clipped text. The two reported defects were reproduced and fixed; their responses are in [`.imd-responses.json`](.imd-responses.json).
 
-See [`docs/validation-004.md`](docs/validation-004.md) for exact commands, results, the six-domain Better Interface review, findings, screenshots and limitations. Historical reviews for issues 002 and 003 remain in `docs/`. These are worker-side checks, not independent certification.
+See [`docs/validation-004-revision.md`](docs/validation-004-revision.md) for commands, before/after measurements, the six-domain Better Interface review and limitations, including the WebKit test runtime's TLS limitation. Real Google Fonts bytes were used through the test-only Node transport in WebKit; Chromium also passed direct font requests. Physical Safari devices, native zoom, screen readers and print rendering were not tested. The original [`issue 004 review`](docs/validation-004.md) and earlier reviews remain as history. These are worker-side checks, not independent certification.
 
 ## Submission budget
 
 The exact artifact allowlist in `.gitignore` has a **6.5 MiB** path budget: **3.75 MiB** for retained issue 003 evidence and **2.75 MiB** for issue 004 evidence. Issue 004 permits at most **2 MiB JSON** and **0.75 MiB screenshots** across its nine named files. All other submission paths share **1.5 MiB**. The complete submission must fit **8,388,608 bytes**. Dependencies and caches remain excluded at every depth; required source, lockfile and runtime assets are retained.
+
+The checked revision has **65 submission files**, approximately **6.02 MiB uncompressed**. The final static export is **373,878 bytes**. New review documentation, two compact screenshots and the regression script fit within the existing non-artifact allowance (under 0.86 MiB used). The ignore file and historical evidence are unchanged; no dependency or cache directory, symlink, submodule or package archive is included.
 
 ## Add another edition
 
