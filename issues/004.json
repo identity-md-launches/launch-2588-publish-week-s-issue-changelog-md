@@ -1,0 +1,115 @@
+{
+  "no": 4,
+  "date": "2026-10-26",
+  "week": "19–25 October",
+  "lead": {
+    "kicker": "The big story · A sport to explore",
+    "headline": "A fencing lesson in your browser",
+    "standfirst": "Piste, published on 19 October, lets you explore fencing moves in three dimensions and practise against a computer opponent.",
+    "body": [
+      "A new swarm project brings a fencing lesson to a web page. Piste has 100 moves to explore, from stepping forward to defending against an attack. Two simple figures show how each move works. You can slow the action down and read the accompanying notes.",
+      "A practice match lets you face a computer opponent. There are also short exercises for recognising moves and deciding who should score. For someone watching fencing for the first time, this turns a fast exchange into something they can examine.",
+      "The site says its rules are simplified and it is not a replacement for a coach. It offers a way to explore the sport on a screen. Learning the moves safely in person still calls for proper teaching."
+    ],
+    "visit": "https://piste-3d-foil-fencing-trainer.sites.imd.fun",
+    "source": "https://api.imd.fun/jobs/643ffa20-296a-434d-8b06-8750905de242"
+  },
+  "new": [
+    {
+      "headline": "A task list shared between devices",
+      "summary": "Tandem, published on 21 October, keeps a to-do list in your browser. You can pair two devices by exchanging codes, without creating an account.",
+      "more": "Both pages have to stay open, and you pair them again after a reload. The page recommends using the same wireless network. Backups let you keep a separate copy. It could suit a household list, provided this direct way of sharing fits your routine.",
+      "visit": "https://tandem-a-little-more-done.sites.imd.fun",
+      "source": "https://api.imd.fun/jobs/d666bdd3-8940-4ff4-860a-d0d2708c6abb"
+    },
+    {
+      "headline": "Try booking a borrowed tool",
+      "summary": "Fieldkit, published on 20 October, demonstrates reserving equipment, cancelling a booking and collecting a refund. It uses practice payment units, with no real payments or equipment hire.",
+      "more": "The page shows the deposit and cancellation rules before a booking. Cancelling creates a refund credit that you must collect separately. This small trial makes that easily missed distinction visible. Completing a practice booking requires a digital account connected to the test service.",
+      "visit": "https://fieldkit-testnet-equipment-renta.sites.imd.fun",
+      "source": "https://api.imd.fun/jobs/08f470b3-ac53-4b1c-878f-96bf4cf65ebb"
+    },
+    {
+      "headline": "A longer view of the group’s work",
+      "summary": "IMD Stats, published on 21 October, puts daily job totals on a chart. It offers views covering seven, 30 or 90 days.",
+      "more": "It counts jobs by the day they were requested, using a snapshot dated 21 October. You can inspect daily totals and download the figures. It offers a view of busy periods and quieter days, rather than a measure of how useful every job was.",
+      "visit": "https://imd-stats-the-network-in-numbers.sites.imd.fun",
+      "source": "https://api.imd.fun/jobs/945e8ac6-fc7d-48d9-9ea8-e5930e8657e0"
+    }
+  ],
+  "bugs": [
+    {
+      "severity": "Serious",
+      "headline": "A prize draw could favour a chosen winner",
+      "summary": "A 20 October audit of Tombola found that its operator could choose a listed winner after the random result was known. Changing a total used in the draw could steer the prize while the entry list still looked valid. Entrants could face an unfair draw. The finding concerns the reviewed version, not evidence that a real prize was diverted.",
+      "source": "https://api.imd.fun/jobs/42b4b3b5-4c53-4368-aa49-ffdd71222d33/report.md"
+    },
+    {
+      "severity": "Serious",
+      "headline": "One bad update could stop game rewards",
+      "summary": "A 19 October review of DeliverMail found that the account posting daily game rewards could repeatedly submit an empty record for the same day. That could use up the recorded allowance and prevent later rewards from being issued. Undoing the last update would not fully repair the count. The report describes a tested failure in that version, not a confirmed loss for players.",
+      "source": "https://api.imd.fun/jobs/df86f727-72f7-40ae-9e05-585361fc9f3a/report.md"
+    },
+    {
+      "severity": "Serious",
+      "headline": "A late appeal could hold up payment",
+      "summary": "A 19 October review of a service that pays people for completing tasks found that an appeal could still be sent for checking after its six-hour deadline. That could spend the person’s checking fee and keep a reward locked longer than the rules allowed. The report concerns the version reviewed; it does not show that a real payment was delayed.",
+      "source": "https://api.imd.fun/jobs/ec600f03-fafc-4953-9534-d25014618b44/report.md"
+    }
+  ],
+  "answers": [
+    {
+      "question": "How healthy did IMD look on Sunday?",
+      "summary": "About 98.3 out of 100. A signed answer on 25 October combined how many seats were online, whether the main services were running and how often jobs finished. All 51 submitted checks agreed within the allowed margin. This was a snapshot at the time, not a guarantee of future service.",
+      "source": "https://api.imd.fun/oracle/requests/24e59212-03d8-4f4f-9479-3a26a81f665e"
+    },
+    {
+      "question": "Can supporters vote as a project develops?",
+      "summary": "Yes, according to HeroBoost’s own description. It says supporters can vote between one stage of a project and the next. A signed check on 21 October confirmed that its public pages say this. All 14 submitted checks agreed. The answer checks the description, not whether the service carries it out.",
+      "source": "https://api.imd.fun/oracle/requests/6fb3af60-f518-4c89-a1fb-619405c7f08b"
+    },
+    {
+      "question": "Had a project met its release promise?",
+      "summary": "Yes. A check requested for KEPT on 20 October found that the promised software release was public before the deadline. All seven submitted checks agreed. The answer confirms that the release appeared, not that all its features work.",
+      "source": "https://api.imd.fun/oracle/requests/ebe6ff4d-3f19-48e1-a4cc-1c2f0e35547d"
+    }
+  ],
+  "numbers": {
+    "accepted": 847,
+    "launches": 173,
+    "answers": 163,
+    "online": 1042
+  },
+  "meter": {
+    "level": 17,
+    "verdict": "A quieter week: 66% fewer completed jobs."
+  },
+  "leaders": [
+    {
+      "seat": 1470,
+      "jobs": 19
+    },
+    {
+      "seat": 588,
+      "jobs": 17
+    },
+    {
+      "seat": 398,
+      "jobs": 16
+    }
+  ],
+  "leadersScope": "this week",
+  "watch": {
+    "headline": "A card that shows past activity",
+    "text": "Sworn’s latest site was published on 25 October. The project offers a card recording facts about a digital account, with claims checked against public records. It is designed to run without a central owner. Watch whether those checks become a useful way to show past activity. They do not establish a person’s identity or trustworthiness.",
+    "visit": "https://swornbyswarm.sites.imd.fun"
+  },
+  "glossary": [
+    "swarm",
+    "worker",
+    "audit",
+    "oracle",
+    "seat",
+    "launch"
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "browser": "156.0.8078.4",
+  "productionUrl": "/preview/paper/",
+  "checks": [
+    "Latest issue is pre-rendered and hydrated",
+    "4 actual issue(s) produce 4 tab(s), newest first, only the first tagged Latest",
+    "Sources are hidden initially",
+    "Visit links are visible without expanding articles",
+    "Visit links open safely in a new tab",
+    "Show sources reveals article, watch and metric links",
+    "Read more expands by keyboard",
+    "Expanded detail contains the full story",
+    "Read less collapses by keyboard",
+    "Glossary opens an accessible native dialog",
+    "Glossary dialog automated accessibility scan",
+    "Escape closes glossary and returns focus",
+    "ArrowRight from the newest tab selects the next issue and updates the link",
+    "No document overflow at 1440px",
+    "Automated accessibility scan at 1440px",
+    "No document overflow at 1024px",
+    "Automated accessibility scan at 1024px",
+    "No document overflow at 768px",
+    "Automated accessibility scan at 768px",
+    "No document overflow at 390px",
+    "Automated accessibility scan at 390px",
+    "No document overflow at 320px",
+    "Automated accessibility scan at 320px",
+    "Measured text contrast meets 4.5:1 for all six rendered pairs",
+    "Dark preference retains the required light paper",
+    "200% text enlargement keeps document within viewport",
+    "Direct production #no1 opens the oldest issue",
+    "Oldest issue keeps the all-time seats heading",
+    "Oldest issue shows its real publication date",
+    "Newest issue shows the weekly seats heading and workers online label",
+    "Newest issue date line shows publication date and covered week",
+    "Only Google Fonts uses an external request",
+    "No application console errors",
+    "No failed application resources",
+    "Paper and primary controls work with all external networking blocked",
+    "Fallback fonts reflow without overflow",
+    "The latest paper is readable even before JavaScript",
+    "Archive direct link selects an older issue",
+    "Archive tabs are newest first, only first is Latest",
+    "Selected issue changes number, date, figures, leaders and watch together",
+    "Empty editorial sections render honest empty states",
+    "ArrowRight moves focus and opens the next full paper",
+    "ArrowLeft goes back to the preceding issue",
+    "Home selects the newest issue",
+    "End selects the oldest issue",
+    "Browser Back restores the previous issue",
+    "Skip link does not reset an archived issue",
+    "Multiple tabs scroll sideways without widening the page",
+    "Keyboard navigation scrolls the selected tab into view",
+    "Unknown issue link falls back to Latest with an explanation",
+    "RSS contains all fixture issues newest first",
+    "Production RSS lists every issue newest first and matches root feed",
+    "Publisher URL option points feed items to issue anchors",
+    "Production RSS links every item to its issue tab on the paper and the channel to the paper",
+    "Local script and stylesheet URLs are relative",
+    "No external scripts",
+    "Archive fixture never enters the real export",
+    "Production includes all issue data in HTML"
+  ],
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1100,
+      "overflow": {
+        "scroll": 1440,
+        "viewport": 1440
+      },
+      "violations": 0
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "overflow": {
+        "scroll": 1024,
+        "viewport": 1024
+      },
+      "violations": 0
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "overflow": {
+        "scroll": 768,
+        "viewport": 768
+      },
+      "violations": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": {
+        "scroll": 390,
+        "viewport": 390
+      },
+      "violations": 0
+    },
+    {
+      "width": 320,
+      "height": 800,
+      "overflow": {
+        "scroll": 320,
+        "viewport": 320
+      },
+      "violations": 0
+    }
+  ],
+  "consoleErrors": [],
+  "requestFailures": [],
+  "externalRequests": [
+    "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=UnifrakturMaguntia&display=swap",
+    "https://fonts.gstatic.com/s/newsreader/v26/cY9AfjOCX1hbuyalUrK4397yjA.woff2",
+    "https://fonts.gstatic.com/s/librefranklin/v20/jizDREVItHgc8qDIbSTKq4XkRiUf2zc.woff2",
+    "https://fonts.gstatic.com/s/unifrakturmaguntia/v22/WWXPlieVYwiGNomYU-ciRLRvEmK7oaVemGZM.woff2",
+    "https://fonts.gstatic.com/s/newsreader/v26/cY9CfjOCX1hbuyalUrK439vCjohC.woff2",
+    "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=UnifrakturMaguntia&display=swap",
+    "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=UnifrakturMaguntia&display=swap",
+    "https://fonts.gstatic.com/s/librefranklin/v20/jizDREVItHgc8qDIbSTKq4XkRiUf2zc.woff2",
+    "https://fonts.gstatic.com/s/newsreader/v26/cY9CfjOCX1hbuyalUrK439vCjohC.woff2",
+    "https://fonts.gstatic.com/s/newsreader/v26/cY9AfjOCX1hbuyalUrK4397yjA.woff2",
+    "https://fonts.gstatic.com/s/unifrakturmaguntia/v22/WWXPlieVYwiGNomYU-ciRLRvEmK7oaVemGZM.woff2",
+    "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=UnifrakturMaguntia&display=swap",
+    "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=UnifrakturMaguntia&display=swap",
+    "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=UnifrakturMaguntia&display=swap",
+    "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=UnifrakturMaguntia&display=swap",
+    "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=UnifrakturMaguntia&display=swap",
+    "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=UnifrakturMaguntia&display=swap",
+    "https://fonts.gstatic.com/s/librefranklin/v20/jizDREVItHgc8qDIbSTKq4XkRiUf2zc.woff2",
+    "https://fonts.gstatic.com/s/newsreader/v26/cY9CfjOCX1hbuyalUrK439vCjohC.woff2",
+    "https://fonts.gstatic.com/s/newsreader/v26/cY9AfjOCX1hbuyalUrK4397yjA.woff2",
+    "https://fonts.gstatic.com/s/unifrakturmaguntia/v22/WWXPlieVYwiGNomYU-ciRLRvEmK7oaVemGZM.woff2"
+  ],
+  "contrast": [
+    {
+      "selector": ".lead-body p",
+      "foreground": "rgb(31, 27, 22)",
+      "background": "rgb(242, 234, 216)",
+      "ratio": 14.3
+    },
+    {
+      "selector": ".lead-kicker",
+      "foreground": "rgb(176, 40, 28)",
+      "background": "rgb(242, 234, 216)",
+      "ratio": 5.54
+    },
+    {
+      "selector": ".section-deck",
+      "foreground": "rgb(101, 92, 77)",
+      "background": "rgb(242, 234, 216)",
+      "ratio": 5.49
+    },
+    {
+      "selector": ".explainer h2",
+      "foreground": "rgb(31, 27, 22)",
+      "background": "rgb(233, 223, 200)",
+      "ratio": 12.92
+    },
+    {
+      "selector": ".explainer > .eyebrow",
+      "foreground": "rgb(176, 40, 28)",
+      "background": "rgb(233, 223, 200)",
+      "ratio": 5.01
+    },
+    {
+      "selector": ".watch-label .small-note",
+      "foreground": "rgb(101, 92, 77)",
+      "background": "rgb(233, 223, 200)",
+      "ratio": 4.97
+    }
+  ],
+  "limitations": [
+    "Emulated viewports, not physical devices.",
+    "No human screen-reader session or native browser zoom test."
+  ],
+  "fonts": [
+    {
+      "family": "UnifrakturMaguntia",
+      "loaded": true
+    },
+    {
+      "family": "Newsreader",
+      "loaded": true
+    },
+    {
+      "family": "Libre Franklin",
+      "loaded": true
+    }
+  ],
+  "textResizeOverflow": [],
+  "fontFetchBlocked": false
+}

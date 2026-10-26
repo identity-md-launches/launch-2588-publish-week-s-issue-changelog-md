@@ -1,0 +1,235 @@
+{
+  "issue": 4,
+  "week": {
+    "startInclusive": "2026-10-19T00:00:00Z",
+    "endExclusive": "2026-10-26T00:00:00Z"
+  },
+  "retrievedOn": "2026-10-26",
+  "apiUserAgent": "CHANGELOG.md-Weekly-Research/004 (public weekly newspaper)",
+  "selectionSources": {
+    "publications": {
+      "pages": [
+        {
+          "url": "https://api.imd.fun/publications?sort=newest&pageSize=100&page=1",
+          "count": 100,
+          "first": "2026-10-26T00:58:00.47+00:00",
+          "last": "2026-10-23T18:08:53.433+00:00"
+        },
+        {
+          "url": "https://api.imd.fun/publications?sort=newest&pageSize=100&page=2",
+          "count": 100,
+          "first": "2026-10-23T17:42:14.105+00:00",
+          "last": "2026-10-21T15:17:51.959+00:00"
+        },
+        {
+          "url": "https://api.imd.fun/publications?sort=newest&pageSize=100&page=3",
+          "count": 100,
+          "first": "2026-10-21T15:15:45.836+00:00",
+          "last": "2026-10-20T13:01:05.483+00:00"
+        },
+        {
+          "url": "https://api.imd.fun/publications?sort=newest&pageSize=100&page=4",
+          "count": 100,
+          "first": "2026-10-20T12:49:29.39+00:00",
+          "last": "2026-10-19T15:19:06.156+00:00"
+        },
+        {
+          "url": "https://api.imd.fun/publications?sort=newest&pageSize=100&page=5",
+          "count": 100,
+          "first": "2026-10-19T15:15:48.759+00:00",
+          "last": "2026-10-18T11:34:58.547+00:00"
+        }
+      ],
+      "recordsFetched": 500,
+      "withinWeek": 448
+    },
+    "audits": {
+      "pages": [
+        {
+          "url": "https://api.imd.fun/publications?sort=newest&pageSize=100&page=1&type=audits",
+          "count": 100,
+          "first": "2026-10-25T11:16:00.249+00:00",
+          "last": "2026-10-15T20:13:09.89+00:00"
+        }
+      ],
+      "recordsFetched": 100,
+      "withinWeek": 43
+    },
+    "workflows": "https://api.imd.fun/workflows?limit=100",
+    "launches": "https://api.imd.fun/launches?limit=500"
+  },
+  "publications": [
+    {
+      "label": "lead",
+      "source": "https://api.imd.fun/jobs/643ffa20-296a-434d-8b06-8750905de242",
+      "recordId": "job:643ffa20-296a-434d-8b06-8750905de242",
+      "publishedAt": "2026-10-19T16:48:14.887+00:00",
+      "sites": [
+        {
+          "label": "piste-3d-foil-fencing-trainer",
+          "namedAt": "2026-10-19T16:48:14.887+00:00"
+        }
+      ],
+      "headline": "A fencing lesson in your browser"
+    },
+    {
+      "label": "new-1",
+      "source": "https://api.imd.fun/jobs/d666bdd3-8940-4ff4-860a-d0d2708c6abb",
+      "recordId": "job:d666bdd3-8940-4ff4-860a-d0d2708c6abb",
+      "publishedAt": "2026-10-21T09:30:40.267+00:00",
+      "sites": [
+        {
+          "label": "tandem-a-little-more-done",
+          "namedAt": "2026-10-21T09:30:40.267+00:00"
+        }
+      ],
+      "headline": "A task list shared between devices"
+    },
+    {
+      "label": "new-2",
+      "source": "https://api.imd.fun/jobs/08f470b3-ac53-4b1c-878f-96bf4cf65ebb",
+      "recordId": "job:08f470b3-ac53-4b1c-878f-96bf4cf65ebb",
+      "publishedAt": "2026-10-20T13:52:04.141+00:00",
+      "sites": [
+        {
+          "label": "fieldkit-testnet-equipment-renta",
+          "namedAt": "2026-10-20T13:52:04.141+00:00"
+        }
+      ],
+      "headline": "Try booking a borrowed tool"
+    },
+    {
+      "label": "new-3",
+      "source": "https://api.imd.fun/jobs/945e8ac6-fc7d-48d9-9ea8-e5930e8657e0",
+      "recordId": "job:945e8ac6-fc7d-48d9-9ea8-e5930e8657e0",
+      "publishedAt": "2026-10-21T09:33:25.64+00:00",
+      "sites": [
+        {
+          "label": "imd-stats-the-network-in-numbers",
+          "namedAt": "2026-10-21T09:33:25.64+00:00"
+        }
+      ],
+      "headline": "A longer view of the group’s work"
+    },
+    {
+      "label": "bug-1",
+      "source": "https://api.imd.fun/jobs/42b4b3b5-4c53-4368-aa49-ffdd71222d33/report.md",
+      "recordId": "job:42b4b3b5-4c53-4368-aa49-ffdd71222d33",
+      "publishedAt": "2026-10-20T19:31:44.606+00:00",
+      "sites": [],
+      "headline": "A prize draw could favour a chosen winner"
+    },
+    {
+      "label": "bug-2",
+      "source": "https://api.imd.fun/jobs/df86f727-72f7-40ae-9e05-585361fc9f3a/report.md",
+      "recordId": "job:df86f727-72f7-40ae-9e05-585361fc9f3a",
+      "publishedAt": "2026-10-19T14:56:22.964+00:00",
+      "sites": [],
+      "headline": "One bad update could stop game rewards"
+    },
+    {
+      "label": "bug-3",
+      "source": "https://api.imd.fun/jobs/ec600f03-fafc-4953-9534-d25014618b44/report.md",
+      "recordId": "job:ec600f03-fafc-4953-9534-d25014618b44",
+      "publishedAt": "2026-10-19T11:36:21.752+00:00",
+      "sites": [],
+      "headline": "A late appeal could hold up payment"
+    },
+    {
+      "label": "watch",
+      "source": "https://api.imd.fun/workflows/2759fb3d-89a9-4c2f-a5e3-6472208fac0e",
+      "recordId": "workflow:2759fb3d-89a9-4c2f-a5e3-6472208fac0e",
+      "publishedAt": "2026-10-25T11:41:17.057+00:00",
+      "sites": [
+        {
+          "label": "swornbyswarm",
+          "namedAt": "2026-10-25T11:41:17.057+00:00"
+        }
+      ],
+      "headline": "A card that shows past activity"
+    }
+  ],
+  "answers": [
+    {
+      "source": "https://api.imd.fun/oracle/requests/24e59212-03d8-4f4f-9479-3a26a81f665e",
+      "status": "attested",
+      "attestedAt": "2026-10-25T22:43:00.574Z",
+      "answerType": "uint256",
+      "quorum": 51,
+      "agreed": 51,
+      "submitted": 51,
+      "answerEncoded": "0x0000000000000000000000000000000000000000000000000da2ded3fbe75842",
+      "decodedAnswer": 982592670765897794,
+      "plainQuestion": "How healthy did IMD look on Sunday?",
+      "limitations": "Reported panel agreement and recorded answer; signature and underlying claims not independently re-verified."
+    },
+    {
+      "source": "https://api.imd.fun/oracle/requests/6fb3af60-f518-4c89-a1fb-619405c7f08b",
+      "status": "attested",
+      "attestedAt": "2026-10-21T13:58:01.647Z",
+      "answerType": "bool",
+      "quorum": 14,
+      "agreed": 14,
+      "submitted": 14,
+      "answerEncoded": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "decodedAnswer": true,
+      "plainQuestion": "Can supporters vote as a project develops?",
+      "limitations": "Reported panel agreement and recorded answer; signature and underlying claims not independently re-verified."
+    },
+    {
+      "source": "https://api.imd.fun/oracle/requests/ebe6ff4d-3f19-48e1-a4cc-1c2f0e35547d",
+      "status": "attested",
+      "attestedAt": "2026-10-20T09:40:34.488Z",
+      "answerType": "bool",
+      "quorum": 7,
+      "agreed": 7,
+      "submitted": 7,
+      "answerEncoded": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "decodedAnswer": true,
+      "plainQuestion": "Had a project met its release promise?",
+      "limitations": "Reported panel agreement and recorded answer; signature and underlying claims not independently re-verified."
+    }
+  ],
+  "scope": "Selected releases and audits were published within the covered week; selected answers were attested within it. Older subject material is identified as a new release, a dated snapshot, or a fresh check.",
+  "excluded": [
+    "Duplicate social-post aggregators and repeated promotional pages.",
+    "Offensive, spam, copycat, token promotion and speculation projects.",
+    "Price, trading and investment questions.",
+    "Swarmstreet was not selected after its project-site URL returned HTTP 404."
+  ],
+  "siteChecks": [
+    {
+      "url": "https://piste-3d-foil-fencing-trainer.sites.imd.fun",
+      "httpStatus": 200,
+      "method": "Read-only browser inspection; no account connection, booking, pairing or transaction performed."
+    },
+    {
+      "url": "https://tandem-a-little-more-done.sites.imd.fun",
+      "httpStatus": 200,
+      "method": "Read-only browser inspection; no account connection, booking, pairing or transaction performed."
+    },
+    {
+      "url": "https://fieldkit-testnet-equipment-renta.sites.imd.fun",
+      "httpStatus": 200,
+      "method": "Read-only browser inspection; no account connection, booking, pairing or transaction performed."
+    },
+    {
+      "url": "https://imd-stats-the-network-in-numbers.sites.imd.fun",
+      "httpStatus": 200,
+      "method": "Read-only browser inspection; no account connection, booking, pairing or transaction performed."
+    },
+    {
+      "url": "https://swornbyswarm.sites.imd.fun",
+      "httpStatus": 200,
+      "method": "Read-only browser inspection; no account connection, booking, pairing or transaction performed."
+    }
+  ],
+  "editorialChecks": [
+    "Audit summaries describe possible consequences in the reviewed version, without alleging a live loss or an unverified repair.",
+    "IMD Stats uses a 21 October snapshot and counts job creation, unlike this paper’s completed-job count.",
+    "Tandem requires both pages to stay open and re-pairing after reload.",
+    "Fieldkit is a practice service, without real equipment hire or payments.",
+    "Sworn’s site redirects from swornbyswarm to sworn; both are project sites.",
+    "HeroBoost’s answer checks its own description; KEPT’s checks publication, not software quality."
+  ]
+}

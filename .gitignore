@@ -1,6 +1,8 @@
-# Submission budget: at most 3.75 MiB under artifacts/ (2.5 MiB JSON,
-# 1.25 MiB screenshots); all other submitted paths share the remaining
-# 4.25 MiB of the assignment's 8 MiB total. Only these nine files are allowed.
+# Submission path budget: artifacts/ at most 6.5 MiB in total:
+# issue 003 keeps its 3.75 MiB allowance (2.5 MiB JSON, 1.25 MiB images);
+# issue 004 has 2.75 MiB (2 MiB JSON, 0.75 MiB images). Only the exact
+# files below are allowed. All other submitted paths share 1.5 MiB.
+# The complete submission must remain within 8 MiB (8,388,608 bytes).
 !/artifacts/
 /artifacts/*
 !/artifacts/003-counts.json
@@ -14,6 +16,17 @@
 !/artifacts/003-screenshots/desktop.png
 !/artifacts/003-screenshots/glossary.png
 !/artifacts/003-screenshots/keyboard-focus.png
+!/artifacts/004-counts.json
+!/artifacts/004-story-evidence.json
+!/artifacts/004-interaction-results.json
+!/artifacts/004-render-review.json
+!/artifacts/004-taste.json
+!/artifacts/004-screenshots/
+/artifacts/004-screenshots/*
+!/artifacts/004-screenshots/mobile-first-screen.jpg
+!/artifacts/004-screenshots/desktop.jpg
+!/artifacts/004-screenshots/glossary.jpg
+!/artifacts/004-screenshots/keyboard-focus.jpg
 
 # Development dependencies and caches are never submission assets, at any depth.
 node_modules/

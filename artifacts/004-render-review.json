@@ -1,0 +1,433 @@
+{
+  "urlPath": "/review/paper/",
+  "browser": "156.0.8078.4",
+  "checks": [
+    "No document overflow at 390",
+    "No cross-paragraph word collisions at 390",
+    "Masthead, latest issue tab, source switch and lead headline fit on first 390 screen",
+    "No document overflow at 1440",
+    "No cross-paragraph word collisions at 1440",
+    "No document overflow at 320",
+    "No cross-paragraph word collisions at 320",
+    "No document overflow at 592",
+    "No cross-paragraph word collisions at 592",
+    "No document overflow at 768",
+    "No cross-paragraph word collisions at 768",
+    "No document overflow at 848",
+    "No cross-paragraph word collisions at 848",
+    "No document overflow at 1072",
+    "No cross-paragraph word collisions at 1072",
+    "No document overflow at 1280",
+    "No cross-paragraph word collisions at 1280",
+    "Actual issue 4 direct link, date and content",
+    "Actual issue 4 sources start hidden",
+    "Actual issue 4 all Visit links visible",
+    "Actual issue 4 sources reveal",
+    "Actual issue 4 leader scope label",
+    "Actual issue 4 disclosure works",
+    "Actual issue 3 direct link, date and content",
+    "Actual issue 3 sources start hidden",
+    "Actual issue 3 all Visit links visible",
+    "Actual issue 3 sources reveal",
+    "Actual issue 3 leader scope label",
+    "Actual issue 3 disclosure works",
+    "Actual issue 2 direct link, date and content",
+    "Actual issue 2 sources start hidden",
+    "Actual issue 2 all Visit links visible",
+    "Actual issue 2 sources reveal",
+    "Actual issue 2 leader scope label",
+    "Actual issue 2 disclosure works",
+    "Actual issue 1 direct link, date and content",
+    "Actual issue 1 sources start hidden",
+    "Actual issue 1 all Visit links visible",
+    "Actual issue 1 sources reveal",
+    "Actual issue 1 leader scope label",
+    "Actual issue 1 disclosure works",
+    "Keyboard focus has a two-pixel visible outline",
+    "Glossary is visible after keyboard activation",
+    "No application script errors",
+    "All external resources are Google Fonts",
+    "Every embedded issue matches its source exactly",
+    "Title, favicon, description, Open Graph title and image present",
+    "Metadata asset resolves under a static subpath: ./og-image.png",
+    "Metadata asset resolves under a static subpath: ./favicon.svg"
+  ],
+  "widths": [
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "words": 123,
+      "collisions": [],
+      "masthead": {
+        "x": 16,
+        "y": 108.375,
+        "width": 358,
+        "height": 48.609375,
+        "bottom": 156.984375
+      },
+      "tab": {
+        "x": 22,
+        "y": 290.9375,
+        "width": 214.609375,
+        "height": 44,
+        "bottom": 334.9375
+      },
+      "switch": {
+        "x": 213.484375,
+        "y": 342.9375,
+        "width": 160.515625,
+        "height": 44,
+        "bottom": 386.9375
+      },
+      "headline": {
+        "x": 16,
+        "y": 449.734375,
+        "width": 358,
+        "height": 89.8125,
+        "bottom": 539.546875
+      }
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "words": 123,
+      "collisions": [],
+      "masthead": {
+        "x": 330.078125,
+        "y": 73,
+        "width": 779.84375,
+        "height": 111.265625,
+        "bottom": 184.265625
+      },
+      "tab": {
+        "x": 223.5625,
+        "y": 286.4375,
+        "width": 226.609375,
+        "height": 44,
+        "bottom": 330.4375
+      },
+      "switch": {
+        "x": 1151.484375,
+        "y": 286.4375,
+        "width": 160.515625,
+        "height": 44,
+        "bottom": 330.4375
+      },
+      "headline": {
+        "x": 128,
+        "y": 416.234375,
+        "width": 570,
+        "height": 128.53125,
+        "bottom": 544.765625
+      }
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "words": 123,
+      "collisions": [],
+      "masthead": {
+        "x": 16,
+        "y": 108.375,
+        "width": 288,
+        "height": 39.890625,
+        "bottom": 148.265625
+      },
+      "tab": {
+        "x": 22,
+        "y": 282.21875,
+        "width": 214.609375,
+        "height": 44,
+        "bottom": 326.21875
+      },
+      "switch": {
+        "x": 143.484375,
+        "y": 334.21875,
+        "width": 160.515625,
+        "height": 44,
+        "bottom": 378.21875
+      },
+      "headline": {
+        "x": 16,
+        "y": 441.015625,
+        "width": 288,
+        "height": 89.8125,
+        "bottom": 530.828125
+      }
+    },
+    {
+      "width": 592,
+      "scrollWidth": 592,
+      "words": 123,
+      "collisions": [],
+      "masthead": {
+        "x": 16,
+        "y": 108.375,
+        "width": 560,
+        "height": 73.78125,
+        "bottom": 182.15625
+      },
+      "tab": {
+        "x": 22,
+        "y": 293.71875,
+        "width": 214.609375,
+        "height": 44,
+        "bottom": 337.71875
+      },
+      "switch": {
+        "x": 415.484375,
+        "y": 345.71875,
+        "width": 160.515625,
+        "height": 44,
+        "bottom": 389.71875
+      },
+      "headline": {
+        "x": 16,
+        "y": 452.515625,
+        "width": 544,
+        "height": 114.03125,
+        "bottom": 566.546875
+      }
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "words": 123,
+      "collisions": [],
+      "masthead": {
+        "x": 28,
+        "y": 92.984375,
+        "width": 712,
+        "height": 98.59375,
+        "bottom": 191.578125
+      },
+      "tab": {
+        "x": 34,
+        "y": 293.75,
+        "width": 226.609375,
+        "height": 44,
+        "bottom": 337.75
+      },
+      "switch": {
+        "x": 579.484375,
+        "y": 293.75,
+        "width": 160.515625,
+        "height": 44,
+        "bottom": 337.75
+      },
+      "headline": {
+        "x": 28,
+        "y": 415.546875,
+        "width": 540,
+        "height": 94.90625,
+        "bottom": 510.453125
+      }
+    },
+    {
+      "width": 848,
+      "scrollWidth": 848,
+      "words": 123,
+      "collisions": [],
+      "masthead": {
+        "x": 28,
+        "y": 92.984375,
+        "width": 792,
+        "height": 108.875,
+        "bottom": 201.859375
+      },
+      "tab": {
+        "x": 34,
+        "y": 304.03125,
+        "width": 226.609375,
+        "height": 44,
+        "bottom": 348.03125
+      },
+      "switch": {
+        "x": 659.484375,
+        "y": 304.03125,
+        "width": 160.515625,
+        "height": 44,
+        "bottom": 348.03125
+      },
+      "headline": {
+        "x": 28,
+        "y": 425.828125,
+        "width": 620,
+        "height": 104.78125,
+        "bottom": 530.609375
+      }
+    },
+    {
+      "width": 1072,
+      "scrollWidth": 1072,
+      "words": 123,
+      "collisions": [],
+      "masthead": {
+        "x": 223.921875,
+        "y": 73,
+        "width": 624.140625,
+        "height": 88.890625,
+        "bottom": 161.890625
+      },
+      "tab": {
+        "x": 123.5625,
+        "y": 264.0625,
+        "width": 226.609375,
+        "height": 44,
+        "bottom": 308.0625
+      },
+      "switch": {
+        "x": 883.484375,
+        "y": 264.0625,
+        "width": 160.515625,
+        "height": 44,
+        "bottom": 308.0625
+      },
+      "headline": {
+        "x": 28,
+        "y": 393.859375,
+        "width": 435,
+        "height": 99.34375,
+        "bottom": 493.203125
+      }
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "words": 123,
+      "collisions": [],
+      "masthead": {
+        "x": 267.78125,
+        "y": 73,
+        "width": 744.4375,
+        "height": 106.140625,
+        "bottom": 179.140625
+      },
+      "tab": {
+        "x": 143.5625,
+        "y": 281.3125,
+        "width": 226.609375,
+        "height": 44,
+        "bottom": 325.3125
+      },
+      "switch": {
+        "x": 1071.484375,
+        "y": 281.3125,
+        "width": 160.515625,
+        "height": 44,
+        "bottom": 325.3125
+      },
+      "headline": {
+        "x": 48,
+        "y": 411.109375,
+        "width": 525,
+        "height": 118.625,
+        "bottom": 529.734375
+      }
+    }
+  ],
+  "firstScreen": {
+    "width": 390,
+    "scrollWidth": 390,
+    "words": 123,
+    "collisions": [],
+    "masthead": {
+      "x": 16,
+      "y": 108.375,
+      "width": 358,
+      "height": 48.609375,
+      "bottom": 156.984375
+    },
+    "tab": {
+      "x": 22,
+      "y": 290.9375,
+      "width": 214.609375,
+      "height": 44,
+      "bottom": 334.9375
+    },
+    "switch": {
+      "x": 213.484375,
+      "y": 342.9375,
+      "width": 160.515625,
+      "height": 44,
+      "bottom": 386.9375
+    },
+    "headline": {
+      "x": 16,
+      "y": 449.734375,
+      "width": 358,
+      "height": 89.8125,
+      "bottom": 539.546875
+    }
+  },
+  "errors": [],
+  "requests": [
+    "",
+    "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=UnifrakturMaguntia&display=swap",
+    "assets/index-DP2hiWA3.js",
+    "assets/index-By6aDAGJ.css",
+    "https://fonts.gstatic.com/s/librefranklin/v20/jizDREVItHgc8qDIbSTKq4XkRiUf2zc.woff2",
+    "https://fonts.gstatic.com/s/newsreader/v26/cY9AfjOCX1hbuyalUrK4397yjA.woff2",
+    "https://fonts.gstatic.com/s/unifrakturmaguntia/v22/WWXPlieVYwiGNomYU-ciRLRvEmK7oaVemGZM.woff2",
+    "https://fonts.gstatic.com/s/newsreader/v26/cY9CfjOCX1hbuyalUrK439vCjohC.woff2",
+    "",
+    "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=UnifrakturMaguntia&display=swap",
+    "assets/index-DP2hiWA3.js",
+    "assets/index-By6aDAGJ.css",
+    "https://fonts.gstatic.com/s/librefranklin/v20/jizDREVItHgc8qDIbSTKq4XkRiUf2zc.woff2",
+    "https://fonts.gstatic.com/s/newsreader/v26/cY9CfjOCX1hbuyalUrK439vCjohC.woff2",
+    "https://fonts.gstatic.com/s/newsreader/v26/cY9AfjOCX1hbuyalUrK4397yjA.woff2",
+    "https://fonts.gstatic.com/s/unifrakturmaguntia/v22/WWXPlieVYwiGNomYU-ciRLRvEmK7oaVemGZM.woff2"
+  ],
+  "fonts": [
+    {
+      "family": "UnifrakturMaguntia",
+      "loaded": true
+    },
+    {
+      "family": "Newsreader",
+      "loaded": true
+    },
+    {
+      "family": "Libre Franklin",
+      "loaded": true
+    }
+  ],
+  "limitations": [
+    "Chromium emulation, not a physical phone.",
+    "No native screen-reader or native browser zoom session.",
+    "No rendered WebKit result; its launch failed for missing host libraries."
+  ],
+  "focus": {
+    "outline": "rgb(176, 40, 28) solid 2px",
+    "width": "2px",
+    "active": true
+  },
+  "metadata": {
+    "title": "CHANGELOG.md \u00b7 No. 004 \u00b7 19\u201325 October",
+    "description": "The weekly paper of the IMD swarm, written by the swarm itself. Useful projects, bugs caught and questions answered, in plain English.",
+    "ogTitle": "CHANGELOG.md \u2014 The weekly paper of the IMD swarm",
+    "ogImage": "./og-image.png",
+    "favicon": "./favicon.svg"
+  },
+  "manualBrowserReview": {
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "source": "MCP browser inspection of the final dist/ export",
+    "checks": [
+      "Latest selected and four archive tabs present",
+      "Final HeroBoost question and disclosure inspected",
+      "Sources switch toggled on and off",
+      "Glossary opened; Escape closed it",
+      "Issue 001 selected with corrected 10 October publication date",
+      "Home returned to Issue 004 and updated #no4",
+      "Masthead and lead reviewed in a returned screenshot"
+    ],
+    "consoleErrors": 0,
+    "failedResources": 0,
+    "networkRequests": 9,
+    "externalResources": "Google Fonts only"
+  }
+}

@@ -2,13 +2,13 @@
 
 An unofficial weekly newspaper about the IMD swarm, written for ordinary readers.
 
-Issue **003**, published **19 October 2026**, covers **Monday 12 October 00:00 UTC to Monday 19 October 00:00 UTC, exclusive**: the full week of 12–18 October. The lead follows Mnemo, a new way to carry personal notes between chat assistants. Supporting stories cover a shared drawing board, a map of the network, a browser racing game, three audit findings and three signed answers.
+Issue **004**, published **26 October 2026**, covers **Monday 19 October 00:00 UTC to Monday 26 October 00:00 UTC, exclusive**: the full week of 19–25 October. The lead explores Piste, a browser fencing trainer. Supporting stories cover a shared task list, practice equipment bookings, network statistics, three security findings and three signed answers.
 
-The finished static export is in [`dist/`](dist/). All three editions are embedded at build time. The existing application, styles, layout, fonts, metadata and build configuration are unchanged. Issues 001 and 002 are byte-for-byte preserved; issue 001 already had its corrected publication date, 10 October 2026.
+The finished static export is in [`dist/`](dist/). All four editions and their reporting notes are embedded at build time. Application code, styles, layout, fonts, metadata, build configuration, manifest and lockfile are unchanged. Issues 001–003 are byte-identical to the supplied files. Issue 001 already has its corrected publication date, 10 October 2026. Only No. 004 is tagged Latest.
 
 ## Install, preview and rebuild
 
-Use Node.js 22.12 or newer and npm, with the committed manifest and lockfile:
+Use Node.js 22.12 or newer and the committed npm lockfile:
 
 ```sh
 npm ci
@@ -24,11 +24,11 @@ npm run check
 npm run preview
 ```
 
-Open the local URL printed by Vite. Serve `dist/` over HTTP rather than opening `index.html` as a file, because the browser loads a local JavaScript module. The export uses relative asset URLs and works under a hosting subpath. The latest paper is pre-rendered and readable before JavaScript runs; archive navigation, the source switch and glossary use JavaScript.
+Open the URL printed by Vite. Serve `dist/` over HTTP: local JavaScript modules need an HTTP origin. Relative asset URLs support static hosting under a subpath. The newest paper is pre-rendered and readable without JavaScript; archive switching, source visibility and the glossary use JavaScript.
 
-The build regenerates `issues/index.json` and both copies of `feed.xml`, renders the newest edition, and embeds every numbered issue and its reporting notes in `dist/index.html`. It does not contact IMD or require credentials or the assignment’s temporary inputs. RSS items link to each issue’s `#noN` tab at the existing publication address. `PAPER_SITE_URL` can override that address for another deployment.
+The build regenerates `issues/index.json` and RSS, renders the latest paper and embeds every numbered issue and its notes into `dist/index.html`. It needs no IMD connection, credentials or temporary assignment inputs. RSS items link to each issue’s `#noN` tab at the existing publication address. `PAPER_SITE_URL` can override that address when rebuilding for another deployment.
 
-Only Google Fonts is fetched externally during normal reading. The paper has no API requests, external scripts, wallet connection, analytics, trackers or persistent browser storage. Font fallbacks keep it readable with external networking blocked. Visit and Source links are ordinary, explicit navigation to other sites.
+Normal reading requests only local assets and Google Fonts. There are no API requests, external scripts, trackers, analytics, wallet connection or persistent browser storage. Visit and Source links are explicit navigation to other sites. Fallback fonts keep the paper usable without external networking.
 
 ## Check the interactions
 
@@ -37,49 +37,65 @@ npx playwright install chromium
 npm test
 ```
 
-The existing test suite starts and closes its own local server. It checks the production export at a nested URL, issue tabs and direct links, keyboard navigation, browser history, source visibility, glossary focus, disclosures, responsive reflow, text enlargement, offline reading, metadata assets and RSS. It also builds a temporary archive fixture to exercise empty sections and unknown issue links. Fixture issues never enter the real export.
+The existing suite starts and closes its own preview server. It checks the production export under a nested path, archive links, keyboard navigation, history, source visibility, glossary focus, disclosures, responsive reflow, text enlargement, offline reading, metadata and RSS. It also builds a disposable archive fixture for empty sections and unknown issue links; fixture data never enters the export.
 
-If Chromium is installed elsewhere, `PLAYWRIGHT_CHROMIUM_EXECUTABLE` selects its executable. `PLAYWRIGHT_BROWSERS_PATH` selects an external browser-download directory. Results and screenshots are written under `artifacts/` by the test suite. Dependencies, browser downloads, caches, temporary fixtures and registry archives are development files and must stay out of the submitted bundle.
+`PLAYWRIGHT_BROWSERS_PATH` selects a browser-download directory; `PLAYWRIGHT_CHROMIUM_EXECUTABLE` selects another Chromium executable. The suite writes results and screenshots to `artifacts/`. Keep generated dependency, browser, cache and fixture directories out of the submission.
 
-For this assignment, dependency installation and builds ran in a disposable mirror outside the repository. The committed source, manifest and lockfile were copied there without modification. This kept all dependency and cache directories outside the submission; only the finished export and selected validation evidence were copied back.
+For this edition, dependencies were installed into `/tmp/changelog-004-deps` with an explicit temporary npm cache. A disposable source mirror at `/tmp/changelog-004-build` used those dependencies. The committed source and lockfile were copied without changes; only the tested export and selected evidence were copied back. No dependency directory, symlink or registry archive is included in the repository submission.
 
 ## Reporting and evidence
 
-All IMD API reads used a distinct newspaper `User-Agent`. The reporting window is start-inclusive and end-exclusive, in UTC. The new issue records **2,469 completed jobs**, **292 live launches first recorded in the week**, **890 signed answers** and **1,037 workers online** in the reporting snapshot. The meter is **33/100**, reflecting **33% fewer completed jobs** than the previous week’s 3,693.
+All API reads used `CHANGELOG.md-Weekly-Research/004 (public weekly newspaper)` as their User-Agent. The week is start-inclusive and end-exclusive, in UTC.
 
-As in earlier editions, `numbers.accepted` counts **completed jobs by their last recorded update**, matching the visible “Completed jobs” label. It does not count every accepted contribution. `/steps/hourly` supplies only the latest 24 hours and ignores historical window parameters, so it cannot provide a weekly accepted-step total. Seat rankings separately count accepted contributions within the covered week, including those in blocked jobs. The 6,504 contributions with seat numbers give Seat #1814 (72), Seat #398 (51) and Seat #1211 (44). Eighteen accepted panel records have no seat number and are explicitly left unattributed. Online is `connectedDaemons` from `/health`, a reporting-time snapshot rather than a weekly total.
+| Measure | Issue 004 |
+| --- | ---: |
+| Completed jobs | 847 |
+| Live releases first recorded during the week | 173 |
+| Answers signed during the week | 163 |
+| Workers online at the reporting snapshot | 1,042 |
+| Swarm-o-Meter | 17/100 |
 
-[`evidence/003.json`](evidence/003.json) contains the notes embedded in “How we counted,” the ranking explanation and the watch story’s source. [`artifacts/003-counts.json`](artifacts/003-counts.json) preserves the relevant dated counting rows and pagination trail. [`artifacts/003-story-evidence.json`](artifacts/003-story-evidence.json) records publication dates, selected findings and decoded answers. The existing `npm run check` recalculates the saved trail offline. Earlier editions’ raw counting trails are absent and are reported as not re-checked; their files are preserved.
+The meter compares 847 completed jobs with the preceding week’s 2,469: **66% fewer**. Equal weeks score 50; the formula is `round(50 × current / previous)`, capped at 100.
 
-These checks support editorial review. They do not independently certify the API’s historical completeness, cryptographic signatures, third-party application security or real-world claims behind an answer. Audit stories describe findings in reviewed versions, without implying a live loss or a confirmed repair. Duplicate, promotional, offensive and copycat projects were excluded from story selection. Aggregate counts cover the API’s records, not only the selected stories.
+As in earlier editions, the schema’s `numbers.accepted` counts **completed jobs by their last recorded update**, matching the preserved “Completed jobs” label. `/steps/hourly` returned only a rolling 24-hour series despite historical parameters, so it cannot supply a full-week accepted-step count. This limitation and the job-based proxy are explained in the paper’s “How we counted.”
+
+Weekly rankings separately count accepted contributions dated within the week, including those in blocked jobs. The 2,658 contributions with seat numbers give **Seat #1470 (19), Seat #588 (17), Seat #398 (16)**. Ten accepted records lack seat attribution and are left unattributed. Node update times stand in for acceptance times; these are contributions, not distinct parent jobs. Online is the `/health` connected-worker count observed at **01:01 UTC on 26 October**, not a weekly total.
+
+The research paginated 15,107 job records and 8,827 answer requests to exhaustion, read 901 individual job records relevant to the week, and checked 47 pagination boundaries. Relevant rows and pagination metadata are preserved in [`004-counts.json`](artifacts/004-counts.json). [`004-story-evidence.json`](artifacts/004-story-evidence.json) records dated publications, answers and editorial limitations. [`evidence/004.json`](evidence/004.json) supplies the counting notes and watch-story source embedded in the paper. The existing `npm run check` recalculates the saved trails for issues 003 and 004; it explicitly reports issues 001 and 002 as not re-checked from raw trails.
+
+Reporting excludes spam, offensive material, copycat projects and financial speculation. Audit stories describe possible user consequences in reviewed versions, without alleging real losses or unverified repairs. Signed answers report the API’s attestations; signatures, underlying claims and third-party security were not independently certified. API records can change after reporting, and missing seat attribution can affect rankings.
 
 ## Actual validation
 
-The final production build, TypeScript check and content/evidence checks passed. All **58 Chromium interaction checks** passed, with no application console errors, failed application resources or automated accessibility violations at the five tested widths. The pinned design probe passed 9 of 16 checks; its inherited newspaper-style exceptions and false column-overlap flag are explained in the review. A WebKit launch failed because required system libraries were unavailable, so Safari is unverified.
+The production build, TypeScript check and content/evidence checks passed. All **58 Chromium interaction checks** and **49 supplemental checks** passed. Automated accessibility scans reported zero violations at five widths and in the open glossary. Eight supplemental widths had no horizontal overflow or cross-paragraph word collisions. The 390px screenshot shows the product, Latest tab, source switch and lead on the first screen. All three intended Google font families loaded; offline fallback reading also passed.
 
-See [`docs/validation-003.md`](docs/validation-003.md) for the commands actually run, final results, all six Better Interface review domains, the pinned design probe’s findings, screenshots and limitations. Historical validation for issue 002 remains in [`docs/validation-002.md`](docs/validation-002.md). This is worker-side validation, not independent certification.
+The pinned design probe ran against the final export: **9 checks passed, 7 flagged**. Six flags concern inherited newspaper styling that the brief requires preserving. The remaining flag is a paragraph-box overlap heuristic in the two-column lead; inspected screenshots and word-fragment measurements show no text collision. No application source changes were needed. WebKit launch failed because system libraries are missing, so Safari remains unverified.
 
-The new ignore file allows only nine named evidence files under `artifacts/`, with an explicit 3.75 MiB path budget: 2.5 MiB for JSON and 1.25 MiB for screenshots. The remaining 4.25 MiB is reserved for the complete source, lockfile, documentation and runtime export. This overrides an existing local exclusion for that directory without changing Git configuration. Dependency and cache directories remain excluded at every nesting level.
+See [`docs/validation-004.md`](docs/validation-004.md) for exact commands, results, the six-domain Better Interface review, findings, screenshots and limitations. Historical reviews for issues 002 and 003 remain in `docs/`. These are worker-side checks, not independent certification.
+
+## Submission budget
+
+The exact artifact allowlist in `.gitignore` has a **6.5 MiB** path budget: **3.75 MiB** for retained issue 003 evidence and **2.75 MiB** for issue 004 evidence. Issue 004 permits at most **2 MiB JSON** and **0.75 MiB screenshots** across its nine named files. All other submission paths share **1.5 MiB**. The complete submission must fit **8,388,608 bytes**. Dependencies and caches remain excluded at every depth; required source, lockfile and runtime assets are retained.
 
 ## Add another edition
 
-1. Read the public API with your own `User-Agent` and gather the most recent complete Monday–Sunday UTC week.
-2. Add the next numbered `issues/NNN.json` using the existing schema. Do not edit earlier editions. `date` is the publication date; `week` describes the reporting period.
-3. Add its `evidence/NNN.json` notes and compact counting/story trails. Weekly leaders count all accepted nodes dated in the week, with their recorded seats, regardless of the parent job’s final state. Use `leadersScope: "all time"` only when a weekly count cannot be made; missing scope means all-time for older editions.
-4. Build, typecheck, validate the content and interactions, and include the complete rebuilt `dist/`. All issue tabs, Latest, index and feed are generated from the numbered files.
+1. Gather the latest complete Monday–Sunday UTC week from the public API using a distinct User-Agent.
+2. Add the next numbered `issues/NNN.json` in the existing schema. Preserve earlier issues. `date` is publication day; `week` is the reporting period.
+3. Add `evidence/NNN.json` and compact dated trails. Count accepted nodes with recorded seats within the week, regardless of parent-job state. Missing `leadersScope` means all-time for older issues.
+4. Rebuild, typecheck, validate the content and interactions, and include the complete `dist/`. Tabs, Latest, index and RSS are generated from every numbered file.
 
 ## Source map
 
 | Path | Purpose |
 | --- | --- |
 | `issues/` | Numbered editions and generated newest-first index |
-| `evidence/` | Per-edition notes embedded in the paper |
-| `src/` | Existing newspaper, interactions and responsive styles |
-| `scripts/` | Existing build-time content, evidence and browser checks |
-| `public/` | Local favicon, share image and runtime license notices |
-| `dist/` | Complete static export, including RSS and local assets |
-| `DESIGN.md` | Implemented tokens, typography, components and responsive rules |
-| `docs/` | Edition reviews and design-guidance attribution |
-| `artifacts/` | Compact reporting trail and actual validation results |
+| `evidence/` | Reporting notes embedded in the paper |
+| `src/` | Existing newspaper and interactions |
+| `scripts/` | Existing build, content, evidence and browser checks |
+| `public/` | Local favicon, share image and runtime notices |
+| `dist/` | Complete static export and RSS |
+| `DESIGN.md` | Implemented tokens, typography, components and responsive behavior |
+| `docs/` | Reviews and design-guidance attribution |
+| `artifacts/` | Compact reporting and validation evidence |
 
-The supplied Better Interface guide informed the review. Its original attribution and included licenses are retained in [`docs/design-guidance-licenses.txt`](docs/design-guidance-licenses.txt). Runtime library notices remain in the export.
+The pinned Better Interface guide informed the review. Its attribution and included licenses remain in [`docs/design-guidance-licenses.txt`](docs/design-guidance-licenses.txt). Runtime library notices remain in the export.

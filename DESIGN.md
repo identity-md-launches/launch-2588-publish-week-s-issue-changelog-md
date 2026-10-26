@@ -52,7 +52,7 @@ Wide-screen `.front-page` is a **2.05:1 grid** with a 40px gap. The lead body ha
 
 The phone figures use `repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr))`. Normally they form two columns. At 200% text enlargement they can become one column, preserving readability. The tabs are the one intentional horizontally scrolling region, with a thin scrollbar and automatic selected-tab scrolling for keyboard navigation. The document itself does not scroll sideways at tested widths.
 
-Observed production widths: **1440, 1280, 1024, 768, 390 and 320px**. The 200% text-enlargement check ran at 390px. This was a text-size change, not native browser zoom. No alternate language or right-to-left interface is shipped.
+Observed production widths: **1440, 1280, 1072, 1024, 848, 768, 592, 390 and 320px**. The 200% text-enlargement check ran at 390px. This was a text-size change, not native browser zoom. No alternate language or right-to-left interface is shipped.
 
 ## Elevation & Depth
 
@@ -92,17 +92,17 @@ Focus outlines are two pixels with four-pixel offset, including on inline glossa
 - Preserve the archive’s immutable issue files. Adding a normal edition changes data, index/feed and export; it should not redesign the application.
 - A future additional paper view should begin with `.newspaper` and the existing `Paper` patterns, use the same semantic color tokens and test 320px reflow, enlarged text and keyboard focus before release.
 
-The current six-domain review, rendered evidence and limitations are in [`docs/validation-003.md`](docs/validation-003.md). Attribution to Jakub Krehel’s Better Interface (MIT) and Paul Bakaus’s Impeccable documentation method (Apache-2.0), with both license texts, is retained in [`docs/design-guidance-licenses.txt`](docs/design-guidance-licenses.txt).
+The current six-domain review, rendered evidence and limitations are in [`docs/validation-004.md`](docs/validation-004.md). Attribution to Jakub Krehel’s Better Interface (MIT) and Paul Bakaus’s Impeccable documentation method (Apache-2.0), with both license texts, is retained in [`docs/design-guidance-licenses.txt`](docs/design-guidance-licenses.txt).
 
 ## Publication and archive behavior
 
-The page is a reading product: the masthead identifies it, and the edition tabs and Show sources switch are the primary controls. The latest issue is selected initially. All three issues are embedded in the production HTML at build time; subsequent edition selection does not fetch data.
+The page is a reading product: the masthead identifies it, and the edition tabs and Show sources switch are the primary controls. The latest issue is selected initially. All four issues are embedded in the production HTML at build time; subsequent edition selection does not fetch data.
 
-The `.date-line` shows a publication-date `<time>` and “Covering <week> · UTC”. The `#leaders-title` heading says “Hardest-working seats this week” for `leadersScope: "this week"`, and “Hardest-working seats of all time” otherwise. Issues without a scope retain all-time semantics. The online figure is labelled “Workers online”, with a visible snapshot footnote. These behaviors were already present and are preserved for issue 003.
+The `.date-line` shows a publication-date `<time>` and “Covering <week> · UTC”. The `#leaders-title` heading says “Hardest-working seats this week” for `leadersScope: "this week"`, and “Hardest-working seats of all time” otherwise. Issues without a scope retain all-time semantics. The online figure is labelled “Workers online”, with a visible snapshot footnote. These behaviors were already present and are preserved for issue 004.
 
-The archive now has three tabs, newest first, with only No. 003 tagged Latest. The original horizontal tab scrolling and keyboard scrolling remain. The root metadata includes the title, description, SVG favicon, Open Graph title and local 1200×630 share image. The image’s relative URL supports an export whose eventual hosting address is not part of the build.
+The archive now has four tabs, newest first, with only No. 004 tagged Latest. The original horizontal tab scrolling and keyboard scrolling remain. The root metadata includes the title, description, SVG favicon, Open Graph title and local 1200×630 share image. The image’s relative URL supports an export whose eventual hosting address is not part of the build.
 
-## Scope of the issue 003 review
+## Scope of the issue 004 review
 
 No application code, CSS, component, palette, font, size, spacing, breakpoint, metadata or build configuration changed. New editorial data uses the existing components. The pinned design probe’s stricter house preferences for six type sizes, three weights, sentence-case labels, no kickers and limited first-screen prose conflict with the instruction to keep the existing newspaper design exactly. The incumbent design has more sizes and four weights, tracked uppercase print labels and editorial kickers; those are documented exceptions, not new styling changes or a claim that every probe check passes.
 
